@@ -1,0 +1,397 @@
+/* ALLGEMEINE DEFINITIONEN ########################################################## ALLGEMEINE DEFINITIONEN */
+
+:root {
+  /* Color Theme --> Farben als Variablen welche aufrufbar sind */
+  --theme-DunkelBlau: rgba(2, 94, 114, 1);
+  --theme-HelllBlau: rgba(3, 149, 165, 1);
+  --theme-Gelb: rgba(242, 202, 4, 1);
+  --theme-Orange: rgba(242, 159, 4, 1);
+  --theme-Rot: rgba(165, 78, 28, 1);
+
+  --background: #fcfcfc;
+  --border-color: #f0f0f0;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("fonts/Merriweather-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-ExtraLight.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  color: var(--theme-DunkelBlau);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--theme-DunkelBlau);
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-family: Merriweather;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* ALLGEMEINE DEFINITIONEN ########################################################## ALLGEMEINE DEFINITIONEN */
+
+/* MENUBAR ########################################################## MENUBAR */
+
+header {
+  background: var(--background);
+  padding-top: 0.75vh;
+  border-bottom: 1px solid var(--theme-DunkelBlau);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menubar {
+  /* margin: 0 auto 2vh auto; */
+  margin-bottom: 2vh;
+  padding: 0 25vw;
+  border-collapse: collapse;
+  display: table;
+  /* Sorgt dafür, dass die Menubar als Tabelle angesehen wird. Dies ermöglicht das border-collapse */
+}
+
+.menubar-element {
+  font-family: Merriweather;
+  font-size: 110%;
+  /* color: var(--theme-DunkelBlau); */
+  border: 2px solid var(--theme-HelllBlau);
+  /* border: dicke art farbe */
+  cursor: pointer;
+  padding: 0.5vh 1.5vw;
+  border-collapse: collapse;
+  display: table-cell;
+  /* Sorgt dafür, dass die Menubar als Tabelle angesehen wird und dass die umrandungen überall gleich sind */
+}
+
+/* Da in einem ul nur li's sein können, müssen sowohl auch das li und das a die selbe Klasse besitzen */
+
+.menubar-element:hover a.menubar-element {
+  /* Sorgt dafür, dass wenn über das li oder a gehovert wird, wird die Schrift des a's gehoveret */
+  color: var(--theme-Gelb);
+}
+
+.menubar-element:hover {
+  /* Da das a kein padding oder margin hat, wird hier der Hintergrund für das li gesetzt, welches ein padding und margin besitzt */
+  background-color: var(--theme-HelllBlau);
+}
+
+a.menubar-element {
+  padding: 0;
+  border: 0;
+}
+
+/* MENUBAR ########################################################## MENUBAR */
+
+/* CONTENT ########################################################## CONTENT */
+
+#content {
+  padding: 2vh 0.5vw 0 0.5vw;
+}
+
+/* HOME-CONTENT ########################################################## HOME-CONTENT */
+
+#home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-left-content {
+  border: 1px solid var(--border-color);
+  background: var(--background);
+  height: 25vh;
+  width: 30vw;
+  margin: 9.4vh 0 0 -9.5vw;
+  padding-left: 0.5vw;
+}
+
+.home-left-menu {
+  float: right;
+  margin: 1.5vh 1% 0 0;
+}
+
+.home-right {
+  margin-right: 2vw;
+}
+
+.home-left-menu > ul > li {
+  font-size: 100%;
+  padding: 1.5vh 2.5vw;
+}
+
+.home-right-content {
+  border: 1px solid var(--border-color);
+  background: var(--background);
+  height: 15vh;
+}
+
+.home-menubar-element {
+  color: var(--theme-DunkelBlau);
+  margin-left: -2.5vw;
+}
+
+.home-right-content.active {
+  background: var(--theme-HelllBlau);
+  color: var(--theme-Gelb);
+}
+
+.home-menubar-element:hover {
+  color: var(--theme-Gelb);
+}
+
+span {
+  color: var(--theme-Rot);
+}
+
+/* HOME-CONTENT ########################################################## HOME-CONTENT */
+
+/* ANGEBOTE ########################################################## ANGEBOTE */
+
+#angebote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.angebote-left {
+  width: 639px;
+}
+
+.angebote-left-content {
+  position: relative;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+}
+
+.angebote-left-content > h2 {
+  margin-left: 0.5vw;
+}
+
+.angebote-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-left: 0.5vw;
+}
+
+.angebote-left-menu {
+  font-family: Merriweather;
+  border: 2px solid var(--theme-HelllBlau);
+  /* border: dicke art farbe */
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-right: 0.5vw;
+}
+
+.angebote-left-menu:hover {
+  background-color: var(--theme-HelllBlau);
+}
+
+.angebote-left-menu:hover .angebote-menu-link {
+  color: var(--theme-Gelb);
+}
+
+.angebote-menu-link {
+  white-space: nowrap;
+  padding: 1.5vh 2.5vw;
+}
+
+.angebote-right-picture-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.angebote-right-picture {
+  margin: 2vh 2vw;
+  position: relative;
+}
+
+.angebote-right-picture:nth-child(1) {
+  margin: 0 2vw;
+}
+
+.angebote-right-picture:nth-child(2) {
+  margin: 0 2vw;
+}
+
+.picture {
+  height: calc(100% - 2vh);
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.2s;
+}
+
+.angebote-right-picture:hover .angebote-right-picture-description {
+  transition-duration: 0.2s;
+  opacity: 1;
+}
+
+.angebote-right-picture:hover .picture {
+  filter: brightness(0.3);
+  opacity: 0.8;
+  transition-duration: 0.2s;
+}
+
+.angebote-right-picture-description {
+  opacity: 0;
+  transition-duration: 0.2s;
+  color: var(--border-color);
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+}
+
+.angebote-right-picture-description-titel > span {
+  color: var(--theme-Gelb);
+}
+
+.angebote-right-picture-description-link > a {
+  color: var(--background);
+  padding: 1vh 1vw;
+  border: 1px solid var(--theme-HelllBlau);
+}
+
+.angebote-right-picture-description-link {
+  position: absolute;
+  bottom: 15px;
+}
+
+.angebote-right-picture-description-link > a:hover {
+  color: var(--theme-Gelb);
+  background-color: var(--theme-HelllBlau);
+}
+/* ANGEBOTE ########################################################## ANGEBOTE */
+
+/* REISEZIELE ########################################################## REISEZIELE */
+
+#reiseziele {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#reiseziele-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.reiseziele-right-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#reiseziele-right {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.reiseziele-picture-left {
+  width: 320px;
+  height: 214px;
+  object-fit: cover;
+}
+
+.reiseziele-right-picture-description {
+  position: relative;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+}
+
+.reiseziele-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 0.5vw;
+    width: 646px;
+}
+
+.reiseziele-right-button {
+}
+
+.reiseziele-button-link {
+    white-space: nowrap;
+}
+
+/* REISEZIELE ########################################################## REISEZIELE */
+
+/* CONTENT ########################################################## CONTENT */
+
+/* PARTICLES ########################################################## PARTICLES */
+
+#particles-js canvas {
+  display: block;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition: opacity 0.8s ease, -webkit-transform 1.4s ease;
+  transition: opacity 0.8s ease, transform 1.4s ease;
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+}
+
+/* PARTICLES ########################################################## PARTICLES */
+
+/* FOOTER ########################################################## FOOTER */
+
+footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 15vh;
+  background-color: var(--theme-HelllBlau);
+  border-top: 1px solid var(--theme-HelllBlau);
+  color: var(--theme-Orange);
+}
+
+/* FOOTER ########################################################## FOOTER */

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#home").hide();
+        $("#angebote").hide();
+        $("#reiseziele").show();
+        $(".link-home").click(function() {
+          $("#home").show();
+          $("#angebote").hide();
+          $("#reiseziele").hide();
+        });
+        $(".link-angebote").click(function() {
+          $("#angebote").show();
+          $("#home").hide();
+          $("#reiseziele").hide();
+        });
+        $(".link-reiseziele").click(function() {
+          $("#reiseziele").show();
+          $("#angebote").hide();
+          $("#home").hide();
+        });
+        $(".home-menubar-element").hover(function() {
+          $(".home-right-content").toggleClass("active");
+        });
+        $(".picture").hover(function() {
+          $(".angebote-right-picture-description").toggleClass("active");
+        });
+
+        // $('.angebote-right-picture-description-link').each(function(){
+        //     $(this).css({
+        //         'margin-top':  ($('.angebote-right-picture').outerHeight()) - $('.angebote-right-picture-description-titel').outerHeight()
+        //     });
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Reisebüro Bümpliz</h1>
+      <nav class="menu">
+        <ul class="menubar">
+          <li class="menubar-element link-angebote">
+            <a class="menubar-element link-angebote" href="#">Angebote</a>
+          </li>
+          <li class="menubar-element">
+            <a class="menubar-element link-reiseziele" href="#">Reiseziele</a>
+          </li>
+          <li class="menubar-element link-home">
+            <a class="menubar-element link-home" href="#">Home</a>
+          </li>
+          <!-- <li class="menubar-element">
+            <a class="menubar-element link-blog" href="#">Blog</a>
+          </li> -->
+          <li class="menubar-element">
+            <a class="menubar-element link-kontakt" href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CONTENT ########################### CONTENT -->
+    <section id="content">
+      <!-- HOME ##################### HOME -->
+      <section id="home">
+        <section class="home-left">
+          <div class="home-left-picture">
+            <img src="/bilder/thailand.jpg" alt="Thailand" />
+          </div>
+          <section class="home-left-content">
+            <h2>Thailand</h2>
+            <p class="home-left-text">
+              Reisen Sie jetzt <span>nur</span> für <span>Fr. 999.-</span> nach
+              Thailand!
+            </p>
+            <div class="home-left-menu">
+              <ul>
+                <li class="menubar-element">
+                  <a href="#angebote" class="menubar-element link-angebote"
+                    >Jetzt buchen</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section class="home-right">
+          <div class="home-right-picture">
+            <img src="/bilder/globus.jpg" alt="Globus" />
+          </div>
+          <aside class="home-right-content">
+            <h2>Unsere Reiseziele</h2>
+            <div>
+              <ul class="home-right-menu">
+                <li>
+                  <a
+                    href="#reiseziel"
+                    class="home-menubar-element link-reiseziele"
+                    >Suchen Sie sich ihr Lieblireiseziel aus!</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+      </section>
+      <!-- HOME ##################### HOME -->
+
+      <!-- ANGEBOTE ##################### ANGEBOTE -->
+      <section id="angebote">
+        <section class="angebote-left">
+          <div class="angebote-left-picture">
+            <img src="/bilder/Manhattan.jpg" alt="Manhattan" />
+          </div>
+          <section class="angebote-left-content">
+            <h2>New York</h2>
+            <div class="angebote-flex-container">
+              <p class="angebote-left-text">
+                Erleben Sie New York während 5 Tagen für
+                <span>nur Fr. 1299.-</span> in Begleitung einer anderen Person.
+              </p>
+              <p class="angebote-left-menu">
+                <a href="#" class="angebote-menu-link">Jetzt buchen</a>
+              </p>
+            </div>
+          </section>
+        </section>
+        <section class="angebote-right">
+          <div class="angebote-right-picture-container">
+            <div class="angebote-right-picture">
+              <img
+                src="/bilder/Matterhorn.jpg"
+                alt="Matterhorn"
+                class="picture"
+              />
+              <div class="angebote-right-picture-description">
+                <p class="angebote-right-picture-description-titel">
+                  Eine Woche Zermatt für <span>nur Fr. 1199.-</span>
+                </p>
+                <p class="angebote-right-picture-description-link">
+                  <a href="#">Jetzt buchen!</a>
+                </p>
+              </div>
+            </div>
+            <div class="angebote-right-picture">
+              <img
+                src="/bilder/Sued-Afrika.jpg"
+                alt="Südafrika"
+                class="picture"
+              />
+              <div class="angebote-right-picture-description">
+                <p class="angebote-right-picture-description-titel">
+                  Eine Woche Süd-Afrika für
+                  <span>nur Fr. 859.-</span>
+                </p>
+                <p class="angebote-right-picture-description-link">
+                  <a href="#">Jetzt buchen!</a>
+                </p>
+              </div>
+            </div>
+            <div class="angebote-right-picture">
+              <img src="/bilder/Island.jpg" alt="Island" class="picture" />
+              <div class="angebote-right-picture-description">
+                <p class="angebote-right-picture-description-titel">
+                  Eine Woche Island für <span>nur Fr. 859.-</span>
+                </p>
+                <p class="angebote-right-picture-description-link">
+                  <a href="#">Jetzt buchen!</a>
+                </p>
+              </div>
+            </div>
+            <div class="angebote-right-picture">
+              <img
+                src="/bilder/thailand-klein.jpg"
+                alt="Thailand"
+                class="picture"
+              />
+              <div class="angebote-right-picture-description">
+                <p class="angebote-right-picture-description-titel">
+                  Eine Woche Thailand für <span>nur Fr. 999.-</span>
+                </p>
+                <p class="angebote-right-picture-description-link">
+                  <a href="#">Jetzt buchen!</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- ANGEBOTE ##################### ANGEBOTE -->
+
+      <!-- REISEZIELE #################### REISEZIELE -->
+
+      <section id="reiseziele">
+        <section id="reiseziele-left">
+          <div class="reiseziele-left-content">
+            <div class="reiseziele-left-picture">
+              <img
+                src="./bilder/Europa.jpg"
+                alt="Europa"
+                class="reiseziele-picture-left"
+              />
+            </div>
+          </div>
+          <div class="reiseziele-left-content">
+            <div class="reiseziele-left-picture">
+              <div class="reiseziele-left-picture">
+                <img
+                  src="./bilder/Asien.jpg"
+                  alt="Asien"
+                  class="reiseziele-picture-left"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reiseziele-right">
+          <div class="reiseziele-right-content">
+            <div class="reiseziele-picture-right">
+              <img src="./bilder/Amerika.jpg" alt="Amerika" />
+            </div>
+            <div class="reiseziele-right-picture-description">
+                <div class="reiseziele-flex-container">
+                    <p class="reiseziele-right-text">
+                      Erleben Sie New York während 5 Tagen für
+                      <span>nur Fr. 1299.-</span> in Begleitung einer anderen Person.
+                    </p>
+                    <p class="reiseziele-right-button">
+                      <a href="#" class="reiseziele-button-link">Jetzt buchen</a>
+                    </p>
+                  </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- REISEZIELE #################### REISEZIELE -->
+    </section>
+    <!-- CONTENT ########################### CONTENT -->
+
+    <footer>
+      <section class="footer-left"></section>
+    </footer>
+
+    <div id="particles-js"></div>
+    <script src="/particlesJS/particles.min.js"></script>
+    <script src="/particlesJS/app.js"></script>
+  </body>
+</html>
