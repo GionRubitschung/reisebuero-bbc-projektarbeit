@@ -10,6 +10,7 @@
 
   --background: #fcfcfc;
   --border-color: #f0f0f0;
+  /* --border-color: black; */
 }
 
 @font-face {
@@ -88,8 +89,6 @@ header {
   display: table-cell;
   /* Sorgt dafür, dass die Menubar als Tabelle angesehen wird und dass die umrandungen überall gleich sind */
 }
-
-/* Da in einem ul nur li's sein können, müssen sowohl auch das li und das a die selbe Klasse besitzen */
 
 .menubar-element:hover a.menubar-element {
   /* Sorgt dafür, dass wenn über das li oder a gehovert wird, wird die Schrift des a's gehoveret */
@@ -399,6 +398,89 @@ span {
 }
 
 /* REISEZIELE ########################################################## REISEZIELE */
+
+/* KONTAKT ########################################################## KONTAKT */
+
+#kontakt {
+  display: flex;
+  flex-direction: row;
+}
+
+#map {
+  height: 60vh;
+  width: 50vw;
+  border: 2px solid black;
+  background-color: var(--background);
+}
+
+.kontakt-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50vw;
+  margin-left: 1vw;
+}
+
+.kontakt-right-adresse {
+  width: 30%;
+  background-color: var(--background);
+}
+
+.kontakt-right-adresse-person {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.kontakt-right-adresse-strasse-nr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.kontakt-right-adresse-pls-ort {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reisebuero-daten {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.kontakt-right-kontaktaufnahme {
+  width: 65%;
+}
+
+.kontakt-right-kontaktaufnahme-form>label>h2 {
+  font-size: 100%;
+}
+
+.kontakt-right-kontaktaufnahme-form-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--theme-DunkelBlau);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.kontakt-right-kontaktaufnahme-form {
+  background-color: var(--background);
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: var(--theme-HelllBlau);
+  color: var(--theme-Gelb);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  color: var(--theme-Orange);
+  background-color: var(--theme-DunkelBlau);
+}
+
+/* KONTAKT ########################################################## KONTAKT */
 
 /* CONTENT ########################################################## CONTENT */
 

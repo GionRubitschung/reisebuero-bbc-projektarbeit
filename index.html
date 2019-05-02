@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="style.css" />
-  <title>Document</title>
+  <title>Reisebüro</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -17,7 +17,8 @@
       $("#angebote-amerika").hide();
       $("#angebote-asien").hide();
       $("#angebote-europa").hide();
-      $("#reiseziele").show();
+      $("#reiseziele").hide();
+      $('#kontakt').show();
       // LINK HOME
       $(".link-home").click(function () {
         $("#home").show();
@@ -26,6 +27,7 @@
         $("#angebote-amerika").hide();
         $("#angebote-asien").hide();
         $("#angebote-europa").hide();
+        $('#kontakt').hide();
       });
       // LINK HOME
 
@@ -37,6 +39,9 @@
         $("#angebote-amerika").hide();
         $("#angebote-asien").hide();
         $("#angebote-europa").hide();
+        $('#kontakt').hide();
+
+        alert('Wenn Sie mit dem Mauszeiger über die Bilder fahren, erfahren Sie mehr!')
       });
       // LINK ANGEBOTE
 
@@ -48,8 +53,19 @@
         $("#angebote-amerika").hide();
         $("#angebote-asien").hide();
         $("#angebote-europa").hide();
+        $('#kontakt').hide();
       });
       // LINK REISEZIELE
+
+      $('.link-kontakt').click(function () {
+        $('#kontakt').show();
+        $("#reiseziele").hide();
+        $("#angebote-aktuell").hide();
+        $("#home").hide();
+        $("#angebote-amerika").hide();
+        $("#angebote-asien").hide();
+        $("#angebote-europa").hide();
+      })
 
       // LINK AMERIKA ANGEBOTE
       $('.link-angebote-amerika').click(function () {
@@ -59,6 +75,7 @@
         $("#angebote-amerika").show();
         $("#angebote-asien").hide();
         $("#angebote-europa").hide();
+        $('#kontakt').hide();
       })
       // LINK AMERIKA ANGEBOTE
       $('.link-angebote-asien').click(function () {
@@ -68,6 +85,7 @@
         $("#angebote-amerika").hide();
         $("#angebote-asien").show();
         $("#angebote-europa").hide();
+        $('#kontakt').hide();
       })
       // LINK AMERIKA ANGEBOTE
 
@@ -79,6 +97,7 @@
         $("#angebote-amerika").hide();
         $("#angebote-asien").hide();
         $("#angebote-europa").show();
+        $('#kontakt').hide();
       })
 
       // SONSTIGER CODE
@@ -104,19 +123,16 @@
     <nav class="menu">
       <ul class="menubar">
         <li class="menubar-element link-angebote">
-          <a class="menubar-element link-angebote" href="#angebote#aktuell">Angebote</a>
+          <a class="menubar-element" href="#angebote#aktuell">Angebote</a>
         </li>
         <li class="menubar-element link-reiseziele">
-          <a class="menubar-element link-reiseziele" href="#reiseziele">Reiseziele</a>
+          <a class="menubar-element" href="#reiseziele">Reiseziele</a>
         </li>
         <li class="menubar-element link-home">
-          <a class="menubar-element link-home" href="#home">Home</a>
+          <a class="menubar-element" href="#home">Home</a>
         </li>
-        <!-- <li class="menubar-element">
-            <a class="menubar-element link-blog" href="#">Blog</a>
-          </li> -->
         <li class="menubar-element link-kontakt">
-          <a class="menubar-element link-kontakt" href="#kontakt">Kontakt</a>
+          <a class="menubar-element" href="#kontakt">Kontakt</a>
         </li>
       </ul>
     </nav>
@@ -125,6 +141,7 @@
   <!-- CONTENT ########################### CONTENT -->
   <section id="content">
     <!-- HOME ##################### HOME -->
+
     <section id="home">
       <section class="home-left">
         <div class="home-left-picture">
@@ -162,9 +179,11 @@
         </aside>
       </section>
     </section>
+
     <!-- HOME ##################### HOME -->
 
     <!-- ANGEBOTE ##################### ANGEBOTE -->
+
     <section id="angebote">
       <section id="angebote-aktuell">
         <section class="angebote-left">
@@ -442,6 +461,7 @@
         </section>
       </section>
     </section>
+
     <!-- ANGEBOTE ##################### ANGEBOTE -->
 
     <!-- REISEZIELE #################### REISEZIELE -->
@@ -455,7 +475,8 @@
           <div class="reiseziele-left-picture-description">
             <div class="reiseziele-left-flex-container">
               <p class="reiseziele-text">Europa Reisen</p>
-              <p class="reiseziele-button link-angebote-europa"><a href="#" class="reiseziele-button-link link-angebote-europa">Angebote ansehen</a></p>
+              <p class="reiseziele-button link-angebote-europa"><a href="#"
+                  class="reiseziele-button-link link-angebote-europa">Angebote ansehen</a></p>
             </div>
           </div>
         </div>
@@ -495,6 +516,49 @@
     </section>
 
     <!-- REISEZIELE #################### REISEZIELE -->
+
+    <!-- KONTAKT ####################### KONTAKT -->
+
+    <section id="kontakt">
+      <section class="kontakt-map">
+        <div id="map">HIER WIRD GOOGLE MAPS SEIN</div>
+      </section>
+
+      <section class="kontakt-right">
+        <section class="kontakt-right-adresse">
+          <div class="reisebuero-daten">
+            <p class="kontakt-right-adresse-person">Reisebüro-Bümpliz</p>
+            <p class="kontakt-right-adresse-strasse-nr">Bahnhöheweg 70</p>
+            <p class="kontakt-right-adresse-plz-ort">3018 Bern</p>
+          </div>
+          <div class="persoenliche-daten">
+            <p class="kontakt-right-adresse-person">Gion Rubitschung</p>
+            <p class="kontakt-right-adresse-strasse-nr">Eichacker 2</p>
+            <p class="kontakt-right-adresse-plz-ort">4633 Hauenstein</p>
+          </div>
+        </section>
+        <section class="kontakt-right-kontaktaufnahme">
+          <form class="kontakt-right-kontaktaufnahme-form">
+            <label for="name"><h2>Name</h2></label>
+            <input type="text" class="kontakt-right-kontaktaufnahme-form-input" placeholder="Max Muster" id="name">
+
+            <label for="eMail"><h2>E-Mail Adresse</h2></label>
+            <input type="email" class="kontakt-right-kontaktaufnahme-form-input" placeholder="max.muster@mustermail.com" id="eMail">
+
+            <label for="strasse"><h2>Strasse mit Nr.</h2></label>
+            <input type="text" class="kontakt-right-kontaktaufnahme-form-input" placeholder="Musterstrasse 5" id="strasse">
+          
+            <label for="ort"><h2>Postleihzahl und Ortschaft</h2></label>
+            <input type="text" class="kontakt-right-kontaktaufnahme-form-input" placeholder="1234 Musterort" id="ort">
+
+            <input type="submit" value="Senden">
+          </form>
+        </section>
+      </section>
+    </section>
+
+    <!-- KONTAKT ####################### KONTAKT -->
+
   </section>
   <!-- CONTENT ########################### CONTENT -->
 
