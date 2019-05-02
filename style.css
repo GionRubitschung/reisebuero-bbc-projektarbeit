@@ -36,6 +36,7 @@ body {
 a {
   text-decoration: none;
   color: var(--theme-DunkelBlau);
+  font-family: Merriweather;
 }
 
 ul {
@@ -177,7 +178,25 @@ span {
 
 /* ANGEBOTE ########################################################## ANGEBOTE */
 
-#angebote {
+#angebote-aktuell {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#angebote-amerika {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#angebote-asien {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#angebote-europa {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -251,7 +270,7 @@ span {
 
 .picture {
   height: calc(100% - 2vh);
-  width: 100%;
+  width: 20vw;
   object-fit: cover;
   transition-duration: 0.2s;
 }
@@ -341,18 +360,42 @@ span {
 }
 
 .reiseziele-flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-left: 0.5vw;
-    width: 646px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 0.5vw;
 }
 
-.reiseziele-right-button {
+.reiseziele-button {
+  color: var(--theme-HelllBlau);
+  padding: 1vh 1vw;
+  border: 1px solid var(--theme-HelllBlau);
+  cursor: pointer;
+}
+
+.reiseziele-button:hover {
+  background-color: var(--theme-HelllBlau);
+}
+
+.reiseziele-button:hover .reiseziele-button-link{
+  color: var(--theme-Gelb);
 }
 
 .reiseziele-button-link {
-    white-space: nowrap;
+  white-space: nowrap;
+}
+
+.reiseziele-left-picture-description {
+  position: relative;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+}
+
+.reiseziele-left-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0.5vw;
 }
 
 /* REISEZIELE ########################################################## REISEZIELE */
